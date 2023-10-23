@@ -3,6 +3,7 @@ using ECommons.DalamudServices;
 using Lumina.Excel.GeneratedSheets;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Reflection;
 
 namespace AutoRetainerAPI.Configuration;
@@ -50,6 +51,8 @@ public class OfflineCharacterData
 
     public string Identity => $"{CID}";
     public bool ShouldSerializeIdentity() => false;
+
+    public string CurrentWorld => WorldOverride ?? World;
 
     public override string ToString()
     {
