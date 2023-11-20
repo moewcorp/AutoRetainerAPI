@@ -48,6 +48,7 @@ public class OfflineCharacterData
     public bool ExcludeOverlay = false;
     public List<uint> TransferItemsBlacklist = new();
     public int NumSubSlots = 0;
+    public bool TeleportToFCHouse = false;
 
     public string Identity => $"{CID}";
     public bool ShouldSerializeIdentity() => false;
