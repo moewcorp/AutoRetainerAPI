@@ -4,6 +4,7 @@ using Lumina.Excel.GeneratedSheets;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
 using System.Reflection;
 
 namespace AutoRetainerAPI.Configuration;
@@ -49,6 +50,10 @@ public class OfflineCharacterData
     public List<uint> TransferItemsBlacklist = new();
     public int NumSubSlots = 0;
     public bool TeleportToFCHouse = false;
+    public bool TeleportToRetainerHouse = false;
+    public HouseTeleportTarget HouseTeleportTarget = HouseTeleportTarget.Free_Company_Estate_Hall;
+    public Vector3 FCHouseEntrance = default;
+    public Vector3 PHouseEntrance = default;
 
     public string Identity => $"{CID}";
     public bool ShouldSerializeIdentity() => false;
