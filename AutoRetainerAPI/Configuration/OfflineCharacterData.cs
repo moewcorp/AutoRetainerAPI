@@ -54,6 +54,7 @@ public class OfflineCharacterData
     public HouseTeleportTarget HouseTeleportTarget = HouseTeleportTarget.Free_Company_Estate_Hall;
     public Vector3 FCHouseEntrance = default;
     public Vector3 PHouseEntrance = default;
+    public bool MultiWaitForAllDeployables = false;
 
     public string Identity => $"{CID}";
     public bool ShouldSerializeIdentity() => false;
