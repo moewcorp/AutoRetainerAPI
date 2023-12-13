@@ -20,6 +20,7 @@ public class OfflineRetainerData : IEquatable<OfflineRetainerData>
     public uint VentureID = 0;
     public uint Gil = 0;
     public int DisplayOrder = 0;
+    public ulong RetainerID = 0;
 
     public string Identity => $"{Name}";
     public bool ShouldSerializeIdentity() => false;
