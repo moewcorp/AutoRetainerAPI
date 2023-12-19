@@ -51,9 +51,10 @@ public class OfflineCharacterData
     public int NumSubSlots = 0;
     public bool TeleportToFCHouse = false;
     public bool TeleportToRetainerHouse = false;
+    public bool EnforceTeleportsOnLogin = false;
     public HouseTeleportTarget HouseTeleportTarget = HouseTeleportTarget.Free_Company_Estate_Hall;
-    public Vector3 FCHouseEntrance = default;
-    public Vector3 PHouseEntrance = default;
+    public HouseEntrance FreeCompanyHouseEntrance = null;
+    public HouseEntrance PrivateHouseEntrance = null;
     public bool MultiWaitForAllDeployables = false;
 
     public string Identity => $"{CID}";

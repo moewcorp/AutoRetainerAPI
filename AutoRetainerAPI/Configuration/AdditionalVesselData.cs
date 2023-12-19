@@ -23,5 +23,7 @@ namespace AutoRetainerAPI.Configuration
         public string SelectedUnlockPlan = Guid.Empty.ToString();
         public string SelectedPointPlan = Guid.Empty.ToString();
         public byte[] Points = new byte[5];
+
+        public int IndexOverride = 0;
     }
 }
