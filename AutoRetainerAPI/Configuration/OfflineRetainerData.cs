@@ -10,7 +10,7 @@ namespace AutoRetainerAPI.Configuration;
 public class OfflineRetainerData : IEquatable<OfflineRetainerData>
 {
     public readonly ulong CreationFrame = Svc.PluginInterface.UiBuilder.FrameCount;
-    public bool ShouldSerializeCreationFrame => false;
+    public bool ShouldSerializeCreationFrame() => false;
     public string Name = "";
     public long VentureEndsAt = 0;
     public bool HasVenture = false;
