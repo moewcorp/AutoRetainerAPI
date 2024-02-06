@@ -21,6 +21,7 @@ public class OfflineRetainerData : IEquatable<OfflineRetainerData>
     public uint Gil = 0;
     public int DisplayOrder = 0;
     public ulong RetainerID = 0;
+    public int MBItems = 0;
 
     public string Identity => $"{Name}";
     public bool ShouldSerializeIdentity() => false;
