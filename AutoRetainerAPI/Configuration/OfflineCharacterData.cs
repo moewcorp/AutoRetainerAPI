@@ -56,8 +56,7 @@ public class OfflineCharacterData
     public HouseEntrance FreeCompanyHouseEntrance = null;
     public HouseEntrance PrivateHouseEntrance = null;
     public bool MultiWaitForAllDeployables = false;
-    public int FCPoints = 0;
-    public long FCPointsLastUpdate = 0;
+    public ulong FCID = 0;
 
     public string Identity => $"{CID}";
     public bool ShouldSerializeIdentity() => false;
