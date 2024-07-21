@@ -49,12 +49,7 @@ public class OfflineCharacterData
     public bool ExcludeOverlay = false;
     public List<uint> TransferItemsBlacklist = new();
     public int NumSubSlots = 0;
-    public bool TeleportToFCHouse = false;
-    public bool TeleportToRetainerHouse = false;
-    public bool EnforceTeleportsOnLogin = false;
-    public HouseTeleportTarget HouseTeleportTarget = HouseTeleportTarget.Free_Company_Estate_Hall;
     public HouseEntrance FreeCompanyHouseEntrance = null;
-    public HouseEntrance PrivateHouseEntrance = null;
     public bool MultiWaitForAllDeployables = false;
     public ulong FCID = 0;
 
