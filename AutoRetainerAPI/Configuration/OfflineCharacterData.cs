@@ -47,11 +47,13 @@ public class OfflineCharacterData
     public bool ExcludeRetainer = false;
     public bool ExcludeWorkshop = false;
     public bool ExcludeOverlay = false;
-    public List<uint> TransferItemsBlacklist = new();
     public int NumSubSlots = 0;
-    public HouseEntrance FreeCompanyHouseEntrance = null;
     public bool MultiWaitForAllDeployables = false;
     public ulong FCID = 0;
+    public bool DisablePrivateHouseTeleport = false;
+    public bool DisableFcHouseTeleport = false;
+    public bool DisableApartmentTeleport = false;
+    public TeleportOptionsOverride TeleportOptionsOverride = new();
 
     public string Identity => $"{CID}";
     public bool ShouldSerializeIdentity() => false;

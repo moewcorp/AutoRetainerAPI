@@ -22,4 +22,5 @@ public class AdditionalRetainerData
     public int Ilvl = -1;
     public int Gathering = -1;
     public int Perception = -1;
+    public Guid EntrustPlan = Guid.Empty;
 }
