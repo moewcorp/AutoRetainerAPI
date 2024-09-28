@@ -19,7 +19,6 @@ public class OfflineRetainerData : IEquatable<OfflineRetainerData>
     public uint Job = 0;
     public uint VentureID = 0;
     public uint Gil = 0;
-    public int DisplayOrder = 0;
     public ulong RetainerID = 0;
     public int MBItems = 0;
 
@@ -38,8 +37,7 @@ public class OfflineRetainerData : IEquatable<OfflineRetainerData>
                VentureEndsAt == other.VentureEndsAt &&
                HasVenture == other.HasVenture &&
                Level == other.Level &&
-               VentureBeginsAt == other.VentureBeginsAt &&
-               DisplayOrder == other.DisplayOrder;
+               VentureBeginsAt == other.VentureBeginsAt;
     }
 
     public override int GetHashCode()
