@@ -44,7 +44,7 @@ namespace AutoRetainerAPI
 
         private void OnRetainerReadyForPostprocessIntl(string plugin, string retainer)
         {
-            if (Svc.PluginInterface.InternalName == plugin)
+            if (PluginName == plugin)
             {
                 if (OnRetainerReadyToPostprocess != null)
                 {
@@ -55,7 +55,7 @@ namespace AutoRetainerAPI
 
         private void OnCharacterReadyForPostprocessIntl(string plugin)
         {
-            if (Svc.PluginInterface.InternalName == plugin)
+            if (PluginName == plugin)
             {
                 if (OnCharacterReadyToPostProcess != null)
                 {

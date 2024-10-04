@@ -55,8 +55,11 @@ namespace AutoRetainerAPI
         /// </summary>
         public event OnMainControlsDrawDelegate OnMainControlsDraw;
 
-        public AutoRetainerApi()
+        private string PluginName;
+
+        public AutoRetainerApi(string pluginName = null)
         {
+            PluginName = pluginName ?? Svc.PluginInterface.InternalName;
             Svc.PluginInterface.GetIpcSubscriber<string, object>(ApiConsts.OnSendRetainerToVenture).Subscribe(OnSendRetainerToVentureAction);
             Svc.PluginInterface.GetIpcSubscriber<string, object>(ApiConsts.OnRetainerAdditionalTask).Subscribe(OnRetainerAdditionalTask);
             Svc.PluginInterface.GetIpcSubscriber<string, string, object>(ApiConsts.OnRetainerReadyForPostprocess).Subscribe(OnRetainerReadyForPostprocessIntl);
@@ -73,7 +76,7 @@ namespace AutoRetainerAPI
         /// </summary>
         public void ProcessIPCTaskFromOverlay()
         {
-            Svc.PluginInterface.GetIpcSubscriber<string, object>(ApiConsts.OnRetainerListCustomTask).InvokeAction(Svc.PluginInterface.InternalName);
+            Svc.PluginInterface.GetIpcSubscriber<string, object>(ApiConsts.OnRetainerListCustomTask).InvokeAction(PluginName);
         }
 
 
@@ -82,7 +85,7 @@ namespace AutoRetainerAPI
         /// </summary>
         public void RequestRetainerPostprocess()
         {
-            Svc.PluginInterface.GetIpcSubscriber<string, object>(ApiConsts.RequestRetainerPostProcess).InvokeAction(Svc.PluginInterface.InternalName);
+            Svc.PluginInterface.GetIpcSubscriber<string, object>(ApiConsts.RequestRetainerPostProcess).InvokeAction(PluginName);
         }
 
         /// <summary>
@@ -91,9 +94,9 @@ namespace AutoRetainerAPI
         public void FinishRetainerPostProcess() => Svc.PluginInterface.GetIpcSubscriber<object>(ApiConsts.FinishRetainerPostprocessRequest).InvokeAction();
 
         /// <summary>
-        /// Fire inside <see cref="oncharacterpost"/> event to indicate that you want to do the postprocessing of a character.
+        /// Fire inside <see cref="OnCharacterPostprocessStep"/> event to indicate that you want to do the postprocessing of a character.
         /// </summary>
-        public void RequestCharacterPostprocess() => Svc.PluginInterface.GetIpcSubscriber<string, object>(ApiConsts.RequestCharacterPostProcess).InvokeAction(Svc.PluginInterface.InternalName);
+        public void RequestCharacterPostprocess() => Svc.PluginInterface.GetIpcSubscriber<string, object>(ApiConsts.RequestCharacterPostProcess).InvokeAction(PluginName);
 
 
         /// <summary>
