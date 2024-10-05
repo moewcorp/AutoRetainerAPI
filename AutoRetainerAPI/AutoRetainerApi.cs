@@ -57,9 +57,9 @@ namespace AutoRetainerAPI
 
         private string PluginName;
 
-        public AutoRetainerApi(string pluginName = null)
+        public AutoRetainerApi(string additionalSuffix = null)
         {
-            PluginName = pluginName ?? Svc.PluginInterface.InternalName;
+            PluginName = Svc.PluginInterface.InternalName + (additionalSuffix == null?"":$"_{additionalSuffix}");
             Svc.PluginInterface.GetIpcSubscriber<string, object>(ApiConsts.OnSendRetainerToVenture).Subscribe(OnSendRetainerToVentureAction);
             Svc.PluginInterface.GetIpcSubscriber<string, object>(ApiConsts.OnRetainerAdditionalTask).Subscribe(OnRetainerAdditionalTask);
             Svc.PluginInterface.GetIpcSubscriber<string, string, object>(ApiConsts.OnRetainerReadyForPostprocess).Subscribe(OnRetainerReadyForPostprocessIntl);
