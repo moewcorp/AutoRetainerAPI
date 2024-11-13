@@ -1,9 +1,7 @@
 ﻿using AutoRetainerAPI.Configuration;
-using ECommons;
 using ECommons.DalamudServices;
 using System;
 using System.Collections.Generic;
-using System.Security.Cryptography;
 using static AutoRetainerAPI.Delegates;
 
 namespace AutoRetainerAPI

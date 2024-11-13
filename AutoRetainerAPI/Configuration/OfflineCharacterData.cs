@@ -1,10 +1,6 @@
-﻿using Dalamud.Interface;
-using ECommons.DalamudServices;
-using Lumina.Excel.GeneratedSheets;
+﻿using ECommons.DalamudServices;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Numerics;
 using System.Reflection;
 
 namespace AutoRetainerAPI.Configuration;

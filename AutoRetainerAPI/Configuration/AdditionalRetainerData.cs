@@ -1,5 +1,4 @@
-﻿using AutoRetainerAPI.Configuration;
-using ECommons.DalamudServices;
+﻿using ECommons.DalamudServices;
 using System;
 using System.Reflection;
 
