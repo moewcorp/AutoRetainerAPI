@@ -14,6 +14,8 @@ namespace AutoRetainerAPI.Configuration
         public List<uint> ExcludedRoutes = new();
         public bool Delete = false;
         public bool UnlockSubs = true;
+        public bool EnforceDSSSinglePoint = false;
+        public bool EnforcePlan = false;
 
         public bool ShouldSerializeDelete() => false;
 
