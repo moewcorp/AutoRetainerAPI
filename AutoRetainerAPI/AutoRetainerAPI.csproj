@@ -10,7 +10,6 @@
         <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
         <ProduceReferenceAssembly>false</ProduceReferenceAssembly>
         <EnableWindowsTargeting>true</EnableWindowsTargeting>
-        <UseWindowsForms>true</UseWindowsForms>
         <Nullable>disable</Nullable>
         <NoWarn>CS1591</NoWarn>
         <AssemblyVersion>1.0.0.2</AssemblyVersion>
