@@ -1,10 +1,10 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>net9.0-windows7.0</TargetFramework>
+        <TargetFramework>net8.0-windows7.0</TargetFramework>
         <Platforms>x64</Platforms>
         <LangVersion>preview</LangVersion>
-        <DalamudLibPath>$(appdata)\xivlauncher\addon\Hooks\dev\</DalamudLibPath>
+        <DalamudLibPath>$(appdata)\xivlauncherCN\addon\Hooks\dev\</DalamudLibPath>
         <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
         <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
         <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
