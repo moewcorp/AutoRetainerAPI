@@ -50,6 +50,7 @@ public class OfflineCharacterData
     public bool DisableApartmentTeleport = false;
     public TeleportOptionsOverride TeleportOptionsOverride = new();
     public bool NoGilTrack = false;
+    public Guid ExchangePlan = Guid.Empty;
 
     public string Identity => $"{CID}";
     public bool ShouldSerializeIdentity() => false;
